@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tripwiz-website/static/css/main.9a22ccad.css",
+    "main.js": "/tripwiz-website/static/js/main.71ebcda0.js",
+    "index.html": "/tripwiz-website/index.html",
+    "main.9a22ccad.css.map": "/tripwiz-website/static/css/main.9a22ccad.css.map",
+    "main.71ebcda0.js.map": "/tripwiz-website/static/js/main.71ebcda0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a22ccad.css",
+    "static/js/main.71ebcda0.js"
+  ]
+}
