@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/tripwiz-website">
+    <Router>
       <div className="App">
         <Header />
         <main className="main-content">
