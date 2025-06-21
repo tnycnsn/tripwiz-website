@@ -7,7 +7,7 @@ const Header = () => {
       <div className="header-container">
         <Link to="/" className="logo-container">
           <img 
-            src="/tripwiz-website/logo192.png" 
+            src="/tripwiz.travel/logo192.png" 
             alt="TripWiz Logo" 
             className="logo"
           />
