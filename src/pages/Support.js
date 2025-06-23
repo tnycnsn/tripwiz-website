@@ -3,8 +3,8 @@ import React from 'react';
 const Support = () => {
   return (
     <div className="page-container">
-      <h1 className="page-title">TripWiz Support</h1>
       <div className="support-content">
+        <h1 className="page-title">TripWiz Support</h1>
         <div className="support-intro">
           <p>
             Welcome to the support page! If you are experiencing issues or have any questions, we're here to help.
@@ -46,10 +46,10 @@ const Support = () => {
         <section className="support-section">
           <h2>Contact Us</h2>
           <p>
-            If you need further assistance, feel free to reach out.
+            If you need further assistance, feel free to reach out at:
           </p>
           <p className="contact-email">
-            Email: <a href="mailto:info.tripwiz@gmail.com">info.tripwiz@gmail.com</a>
+            <a href="mailto:info.tripwiz@gmail.com">info.tripwiz@gmail.com</a>
           </p>
         </section>
       </div>

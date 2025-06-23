@@ -3,8 +3,8 @@ import React from 'react';
 const PrivacyPolicy = () => {
   return (
     <div className="page-container">
-      <h1 className="page-title">Privacy Policy</h1>
       <div className="privacy-content">
+        <h1 className="page-title">Privacy Policy</h1>
         <div className="privacy-intro">
           <p>
             We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application TripWiz, available on iOS and Android platforms.
