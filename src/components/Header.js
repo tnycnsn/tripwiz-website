@@ -17,7 +17,7 @@ const Header = () => {
         <nav>
           <ul className="nav-links">
             <li>
-              <Link to="/privacy-policy">Privacy Policy</Link>
+              <Link to="/privacy">Privacy Policy</Link>
             </li>
             <li>
               <Link to="/support">Support</Link>
