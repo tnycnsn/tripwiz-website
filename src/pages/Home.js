@@ -7,16 +7,18 @@ const Home = () => {
       
       <div className="cta-buttons">
         <a 
-          href="#" 
+          href="https://apps.apple.com/de/app/tripwiz-ai-tourist-guide/id6745735451?l=en-GB" 
           className="cta-button"
-          onClick={(e) => e.preventDefault()}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <img src="/AppStoreButton.png" alt="Download on App Store" className="store-button" />
         </a>
         <a 
-          href="#" 
+          href="https://play.google.com/store/apps/details?id=com.tnycnsn.tripwiz" 
           className="cta-button"
-          onClick={(e) => e.preventDefault()}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <img src="/PlayStoreButton.png" alt="Get it on Google Play" className="store-button" />
         </a>
