@@ -6,7 +6,7 @@ const Home = () => {
       <h1 className="hero-title">Explore World and Collect Memories</h1>
       
       <img 
-        src="/logo192.png" 
+        src="/WebPhoto2.png"
         alt="TripWiz App" 
         className="hero-image"
       />
