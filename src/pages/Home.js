@@ -1,6 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Home = () => {
+  const images = [
+    '/WebPhoto2.png',
+    '/WebPhoto3.png',
+    '/WebPhoto4.png',
+    '/WebPhoto5.png'
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      
+      setTimeout(() => {
+        setCurrentImageIndex(nextImageIndex);
+        setNextImageIndex((prevNext) => 
+          prevNext === images.length - 1 ? 0 : prevNext + 1
+        );
+        setIsTransitioning(false);
+      }, 500); // Duration of transition animation
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images.length, nextImageIndex]);
+
   return (
     <div className="home-container">
       <h1 className="hero-title">Explore World and Collect Memories</h1>
@@ -24,11 +51,22 @@ const Home = () => {
         </a>
       </div>
       
-      <img 
-        src="/WebPhoto2.png"
-        alt="TripWiz App" 
-        className="hero-image"
-      />
+      <div className="hero-image-container">
+        <img 
+          src={images[currentImageIndex]}
+          alt="TripWiz App" 
+          className={`hero-image current ${isTransitioning ? 'slide-out' : ''}`}
+          key={`current-${currentImageIndex}`}
+        />
+        {isTransitioning && (
+          <img 
+            src={images[nextImageIndex]}
+            alt="TripWiz App" 
+            className="hero-image next slide-in"
+            key={`next-${nextImageIndex}`}
+          />
+        )}
+      </div>
     </div>
   );
 };

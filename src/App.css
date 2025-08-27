@@ -105,12 +105,50 @@ body {
   line-height: 1.2;
 }
 
-.hero-image {
+.hero-image-container {
+  position: relative;
   max-width: 30%;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hero-image {
+  width: 100%;
   height: auto;
   object-fit: contain;
-  margin: 1rem 0;
   border-radius: 10px;
+  display: block;
+}
+
+.hero-image.current {
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.hero-image.current.slide-out {
+  transform: translateX(-100%);
+}
+
+.hero-image.next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+
+.hero-image.next.slide-in {
+  animation: slideInFromRight 0.5s ease-in-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .cta-buttons {
@@ -381,6 +419,10 @@ body {
     padding: 2rem 1rem;
   }
 
+  .hero-image-container {
+    max-width: 60%;
+  }
+
   .page-container {
     padding: 1rem;
   }
@@ -452,6 +494,10 @@ body {
   .nav-links a {
     padding: 0.3rem 0.8rem;
     font-size: 0.9rem;
+  }
+
+  .hero-image-container {
+    max-width: 80%;
   }
 
   /* Privacy Policy Small Mobile Styles */
